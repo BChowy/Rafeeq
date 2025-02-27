@@ -1,0 +1,155 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v5.0.2 | 20191019 License: none (public domain) */
+
+:root {
+    // font-size: 62.5%;
+    font-size: 16px;
+}
+
+/* Box sizing rules */
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    box-sizing: border-box;
+    min-width: 300px;
+    font-size: 1em;
+    line-height: 1;
+    font-family: Arial, sans-serif;
+    color: var(--wasl-gray-dark-2);
+}
+
+/* Remove list styles */
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit; /* inherit from body text color */
+}
+
+/* Remove form field margin */
+input,
+button,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    gap: 24px;
+    font-family: "Cairo", "Helvetica Neue";
+}
+
+.phone {
+    width: 352px;
+    height: 852px;
+    // background: center / contain no-repeat url(resources/apple-iphone-15-green-portrait.png);
+    /* background-clip: padding-box; */
+    border-radius: 40px;
+    padding: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone::before {
+    content: "";
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(215, 223, 252, 1) 0%, rgba(246, 245, 254, 1) 100%);
+    border-radius: 20px;
+    overflow-y: auto;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    scrollbar-width: none;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+.screen::-webkit-scrollbar {
+    display: none;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    img {
+        position: relative;
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
+        transform: rotate(90deg);
+        top: 72px;
+        left: 100px;
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        font-weight: bold;
+        a {
+            padding: 12px 24px;
+            background-color: #6076cf;
+            color: white;
+            border-radius: 8px;
+            &:hover {
+                background-color: #4f64b7;
+            }
+        }
+    }
+}
